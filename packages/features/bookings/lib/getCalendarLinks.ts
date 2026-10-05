@@ -105,7 +105,6 @@ const buildMicrosoftOfficeLink = ({
   const location = bookingLocation ? encodeURIComponent(bookingLocation) : "";
   const description = encodeURIComponent(eventDescription ?? "");
 
-  // TODO: Why do we need to encode URI this href but not the google calendar link?
   const microsoftOfficeLink = `https://outlook.office.com/calendar/0/deeplink/compose?body=${description}&enddt=${endTimeInUtcFormat}&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=${startTimeInUtcFormat}&subject=${encodeURIComponent(eventName)}${
     location ? `&location=${location}` : ""
   }`;
